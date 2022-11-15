@@ -1,0 +1,23 @@
+<div class="container p-3">
+    <h1 class="">New game</h1>
+    <ul class="list-group list-group-horizontal-md">
+      <% @alphabet.each do |letter| %>
+        <li class="list-group-item list-group-item-primary"><%= letter %></li>
+      <% end %>
+    </ul>
+
+  <div class="container mt-3">
+    <form action="/answer" method="get" data-turbo="false">
+      <div class="row form-row align-items-end">
+        <div class="col-11">
+          <label class="sr-only" for="inlineFormInputName">What is the longest word you can find?</label>
+          <input type="text" name="guess" class="form-control" id="inlineFormInputName" placeholder="Enter your word">
+        </div>
+        <div class="col-1">
+          <button type="button" class="btn btn-primary w-100">Play</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
